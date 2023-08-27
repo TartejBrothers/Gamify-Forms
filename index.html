@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suvidha Foundation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="favicon.jpeg" type="image/jpeg" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="nav">
+        <img src="logo.png" alt="logo" />
+        <div class="navcontent">
+          <button class="navbut">Apply For Intership</button>
+          <button class="navbut">Help Now</button>
+          <p>Events</p>
+          <p>Gallery</p>
+          <p>Contact</p>
+        </div>
+        <div class="navimg" onclick="showmenu()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="1em"
+            viewBox="0 0 448 512"
+          >
+            <
+            <style>
+              svg {
+                fill: #ffffff;
+              }
+            </style>
+            <path
+              d="M32 288c-17.7 0-32 14.3-32 32s14.3 32 32 32l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 288zm0-128c-17.7 0-32 14.3-32 32s14.3 32 32 32l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 160z"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="navmob" id="menu">
+        <div class="navcontentmob">
+          <button class="navbut">Apply For Intership</button>
+          <hr class="linetop" />
+          <button class="navbut">Help Now</button>
+          <hr class="linetop" />
+          <p>Events</p>
+          <hr class="linetop" />
+          <p>Gallery</p>
+          <hr class="linetop" />
+          <p>Contact</p>
+        </div>
+      </div>
+      <div class="mainbody">
+        <div class="contentleft">
+          <div class="contentlefttop">
+            <h5>Points:</h5>
+            <h5 id="pointsholder"></h5>
+          </div>
+          <div class="contentleftbottom">
+            <p>
+              Fill the form and earn points. <br />
+              Each field is worth 10 points
+            </p>
+            <img src="logo.png" alt="points" />
+          </div>
+        </div>
+        <div class="contentright">
+          <form onsubmit="showscore();return false">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your name"
+              onfocus="changeVal(this)"
+              required
+            />
+
+            <br />
+            <label for="lastname">Last Name:</label>
+            <input
+              type="text"
+              id="lastname"
+              placeholder="Enter your Last Name"
+              onfocus="changeVal(this)"
+              required
+            />
+            <br />
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              onfocus="changeVal(this)"
+              required
+            />
+            <br />
+            <button id="submit" class="buttonmain" value="submit">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="footer">&copy Suvidha Mahila Mandal</div>
+    </div>
+    <div class="res" id="score">
+      <div class="mainres">
+        <p id="resultpage">Congratulations</p>
+        <div class="finalscore">
+          <h5 id="results">You Scored :</h5>
+          <h5 id="final"></h5>
+        </div>
+      </div>
+      <button
+        class="buttonmain"
+        onclick="closeres()"
+        style="margin: 10px 0 0 0"
+      >
+        Close
+      </button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
