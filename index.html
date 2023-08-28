@@ -71,37 +71,127 @@
         </div>
         <div class="contentright">
           <form onsubmit="showscore();return false">
-            <label for="name">Name:</label>
-            <input
-              type="text"
-              id="name"
-              placeholder="Enter your name"
-              onfocus="changeVal(this)"
-              required
-            />
+            <div class="formques" id="formfirst">
+              <label for="occ">Occupation:</label>
+              <input
+                type="text"
+                id="occ"
+                name="occ"
+                placeholder="Enter your Occupation"
+                onfocus="changeVal(this)"
+                required
+              />
 
-            <br />
-            <label for="lastname">Last Name:</label>
-            <input
-              type="text"
-              id="lastname"
-              placeholder="Enter your Last Name"
-              onfocus="changeVal(this)"
-              required
-            />
-            <br />
-            <label for="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              placeholder="Enter your email"
-              onfocus="changeVal(this)"
-              required
-            />
-            <br />
-            <button id="submit" class="buttonmain" value="submit">
-              Submit
-            </button>
+              <br />
+              <label for="Employer">Employer:</label>
+              <input
+                type="text"
+                id="Employer"
+                name="Employer"
+                placeholder="Enter your Employer"
+                onfocus="changeVal(this)"
+                required
+              />
+              <br />
+              <label for="status">Employment Status:</label>
+
+              <select
+                name="status"
+                id="status"
+                required
+                onfocus="changeVal(this)"
+              >
+                <option value="full">Full-Time</option>
+                <option value="part">Part-time</option>
+                <option value="student">Student</option>
+                <option value="retired">Retired</option>
+              </select>
+              <br />
+              <div class="buttonsdiv">
+                <button
+                  class="buttonmain"
+                  type="button"
+                  onclick="changeForm(2)"
+                >
+                  Next
+                </button>
+                <button
+                  class="buttonmain"
+                  id="submit"
+                  value="submit"
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+            <div class="formques" id="formsecond">
+              <label for="insurance">Insurance Plan:</label>
+              <input
+                type="text"
+                id="insurance"
+                placeholder="Your Insurance Provider"
+                onfocus="changeVal(this)"
+                required
+              />
+
+              <br />
+              <label for="married">Martial Status:</label>
+              <select
+                name="married"
+                id="married"
+                required
+                onfocus="changeVal(this)"
+              >
+                <option value="married">Married</option>
+                <option value="divorced">Divorced</option>
+                <option value="single">Single</option>
+                <option value="significant">Significant Partnership</option>
+                <option value="widowed">Widowed</option>
+              </select>
+              <br />
+              <label for="live">Live With:</label>
+              <select
+                name="married"
+                id="married"
+                required
+                onfocus="changeVal(this)"
+              >
+                <option value="spouse">Spouse</option>
+                <option value="parents">Parents</option>
+                <option value="children">Children</option>
+                <option value="partner">Partner</option>
+                <option value="friends">Friends</option>
+                <option value="pets">Pets</option>
+                <option value="relatives">Relatives</option>
+                <option value="alone">Alone</option>
+              </select>
+              <br />
+              <div class="buttonsdiv">
+                <button
+                  class="buttonmain"
+                  type="button"
+                  onclick="changeForm(1)"
+                >
+                  Back
+                </button>
+                <button
+                  class="buttonmain"
+                  type="button"
+                  onclick="changeForm(3)"
+                >
+                  Next
+                </button>
+                <button
+                  class="buttonmain"
+                  id="submit"
+                  value="submit"
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
           </form>
         </div>
       </div>

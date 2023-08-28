@@ -34,7 +34,8 @@ body {
   justify-content: center;
 }
 
-form input {
+form input,
+form select {
   width: 90%;
   height: 40px;
   border-radius: 10px;
@@ -42,6 +43,9 @@ form input {
   padding: 10px;
   margin: 10px 0 10px 0;
   font-size: 20px;
+}
+form select {
+  font-size: 14px;
 }
 label {
   display: block;
@@ -81,6 +85,10 @@ form {
 #results {
   transition: all 0.9s ease-in-out;
 }
+#formsecond {
+  display: none;
+}
+
 .navcontentmob {
   width: 100%;
   display: flex;
@@ -91,11 +99,26 @@ form {
   font-size: 20px;
   color: #d9d9d9;
 }
+
+.formques {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 .buttonmain {
-  width: 50%;
+  width: 30%;
   padding: 10px 20px 10px 20px;
   border-radius: 10px;
   border: none;
+  margin-bottom: 20px;
+}
+.buttonsdiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10%;
 }
 .mainbody {
   display: flex;

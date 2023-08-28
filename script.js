@@ -49,3 +49,15 @@ function closeres() {
   }, 750);
   document.getElementById("score").style.backgroundColor = "transparent";
 }
+var formcount = 10;
+function changeForm(a) {
+  formcount = a;
+
+  if (formcount === 1) {
+    document.getElementById("formfirst").style.display = "flex";
+    document.getElementById("formsecond").style.display = "none";
+  } else if (formcount === 2) {
+    document.getElementById("formfirst").style.display = "none";
+    document.getElementById("formsecond").style.display = "flex";
+  }
+}
