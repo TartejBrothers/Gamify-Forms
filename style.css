@@ -35,7 +35,8 @@ body {
 }
 
 form input,
-form select {
+form select,
+form textarea {
   width: 90%;
   height: 40px;
   border-radius: 10px;
@@ -85,7 +86,10 @@ form {
 #results {
   transition: all 0.9s ease-in-out;
 }
-#formsecond {
+#formsecond,
+#formthird,
+#formfourth,
+#formfifth {
   display: none;
 }
 
@@ -113,12 +117,21 @@ form {
   border-radius: 10px;
   border: none;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
-.buttonsdiv {
+.buttonsdiv,
+.buttonsdivsubmit {
   width: 100%;
   display: flex;
   justify-content: center;
   gap: 10%;
+}
+.buttonsdivsubmit {
+  gap: 5%;
+}
+.buttonsdivsubmit .buttonmain {
+  width: 20%;
 }
 .mainbody {
   display: flex;
@@ -235,6 +248,11 @@ form {
   }
   .res {
     position: fixed;
+  }
+  form input,
+  form select,
+  form textarea {
+    font-size: 16px;
   }
 }
 @media screen and (min-width: 801px) {

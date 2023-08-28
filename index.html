@@ -70,7 +70,7 @@
           </div>
         </div>
         <div class="contentright">
-          <form onsubmit="showscore();return false">
+          <form onsubmit="showscore();return false" novalidate id="fullform">
             <div class="formques" id="formfirst">
               <label for="occ">Occupation:</label>
               <input
@@ -101,6 +101,7 @@
                 required
                 onfocus="changeVal(this)"
               >
+                <option value="none">Choose One</option>
                 <option value="full">Full-Time</option>
                 <option value="part">Part-time</option>
                 <option value="student">Student</option>
@@ -114,14 +115,6 @@
                   onclick="changeForm(2)"
                 >
                   Next
-                </button>
-                <button
-                  class="buttonmain"
-                  id="submit"
-                  value="submit"
-                  type="submit"
-                >
-                  Submit
                 </button>
               </div>
             </div>
@@ -143,6 +136,7 @@
                 required
                 onfocus="changeVal(this)"
               >
+                <option value="none">Choose One</option>
                 <option value="married">Married</option>
                 <option value="divorced">Divorced</option>
                 <option value="single">Single</option>
@@ -151,12 +145,8 @@
               </select>
               <br />
               <label for="live">Live With:</label>
-              <select
-                name="married"
-                id="married"
-                required
-                onfocus="changeVal(this)"
-              >
+              <select name="live" id="live" required onfocus="changeVal(this)">
+                <option value="none">Choose One</option>
                 <option value="spouse">Spouse</option>
                 <option value="parents">Parents</option>
                 <option value="children">Children</option>
@@ -167,6 +157,7 @@
                 <option value="alone">Alone</option>
               </select>
               <br />
+
               <div class="buttonsdiv">
                 <button
                   class="buttonmain"
@@ -179,6 +170,158 @@
                   class="buttonmain"
                   type="button"
                   onclick="changeForm(3)"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+            <div class="formques" id="formthird">
+              <label for="emergenycontact">Emergency Contact Number:</label>
+              <input
+                type="text"
+                id="emergenycontact"
+                placeholder="Emergency Contact Number"
+                onfocus="changeVal(this)"
+                required
+              />
+
+              <br />
+              <label for="relation">Relation:</label>
+              <input
+                type="text"
+                id="relation"
+                placeholder="Relation with the person"
+                onfocus="changeVal(this)"
+                required
+              />
+
+              <br />
+              <label for="address">Address:</label>
+              <input
+                type="text"
+                id="address"
+                placeholder="Provide your address"
+                onfocus="changeVal(this)"
+                required
+              />
+              <br />
+              <div class="buttonsdiv">
+                <button
+                  class="buttonmain"
+                  type="button"
+                  onclick="changeForm(2)"
+                >
+                  Back
+                </button>
+                <button
+                  class="buttonmain"
+                  type="button"
+                  onclick="changeForm(4)"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+            <div class="formques" id="formfourth">
+              <label for="homephone">Home Phone:</label>
+              <input
+                type="text"
+                id="homephone"
+                placeholder="Provide your Home Phone"
+                onfocus="changeVal(this)"
+                required
+              />
+
+              <br />
+              <label for="cell">Cell Phone:</label>
+              <input
+                type="text"
+                id="cell"
+                placeholder="Provide your Cell Phone"
+                onfocus="changeVal(this)"
+                required
+              />
+
+              <br />
+              <label for="aboutus">How did you hear about us?</label>
+              <textarea
+                type="textarea"
+                id="aboutus"
+                placeholder="(please be specific; include name of website, friend, etc. if applicable)"
+                onfocus="changeVal(this)"
+                required
+              ></textarea>
+              <br />
+              <div class="buttonsdiv">
+                <button
+                  class="buttonmain"
+                  type="button"
+                  onclick="changeForm(3)"
+                >
+                  Back
+                </button>
+                <button
+                  class="buttonmain"
+                  type="button"
+                  onclick="changeForm(5)"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+            <div class="formques" id="formfifth">
+              <label for="doctor"
+                >Would you like to talk to the doctor about any of the following
+                therapies?</label
+              >
+              <select
+                name="doctor"
+                id="doctor"
+                required
+                onfocus="changeVal(this)"
+              >
+                <option value="none">Choose One</option>
+                <option value="acupuncture">Acupuncture</option>
+                <option value="nutrition">Nutrition/Weight Management</option>
+                <option value="ivnutrition">IV nutrition</option>
+                <option value="homeopathy">Homeopathy</option>
+                <option value="myotherapy">Myotherapy/Bodywork</option>
+                <option value="herbal">Herbal Medicine</option>
+              </select>
+              <br />
+              <label for="symptons"
+                >What are your most important health concerns/symptoms?</label
+              >
+              <input
+                type="text"
+                id="symptoms"
+                placeholder="Please begin with the MOST "
+                onfocus="changeVal(this)"
+                required
+              />
+
+              <br />
+              <label for="importantissues">IMPORTANT to address today.:</label>
+              <input
+                type="text"
+                id="importantissues"
+                placeholder="Any other issues that are important to address today?"
+                onfocus="changeVal(this)"
+                required
+              />
+              <br />
+              <div class="buttonsdivsubmit">
+                <button
+                  class="buttonmain"
+                  type="button"
+                  onclick="changeForm(4)"
+                >
+                  Back
+                </button>
+                <button
+                  class="buttonmain"
+                  type="button"
+                  onclick="changeForm(6)"
                 >
                   Next
                 </button>

@@ -1,6 +1,12 @@
 var pnts = 0;
 var flag = 0;
 const c = [];
+const form = document.getElementById("fullform");
+// form.addEventListener("keypress", function (e) {
+//   if (e.keyCode === 13) {
+//     e.preventDefault();
+//   }
+// });
 document.getElementById("pointsholder").innerHTML = pnts;
 function changeVal(input) {
   var doc = document.getElementById(input.id);
@@ -56,8 +62,32 @@ function changeForm(a) {
   if (formcount === 1) {
     document.getElementById("formfirst").style.display = "flex";
     document.getElementById("formsecond").style.display = "none";
+    document.getElementById("formthird").style.display = "none";
+    document.getElementById("formfourth").style.display = "none";
+    document.getElementById("formfifth").style.display = "none";
   } else if (formcount === 2) {
     document.getElementById("formfirst").style.display = "none";
     document.getElementById("formsecond").style.display = "flex";
+    document.getElementById("formthird").style.display = "none";
+    document.getElementById("formfourth").style.display = "none";
+    document.getElementById("formfifth").style.display = "none";
+  } else if (formcount === 3) {
+    document.getElementById("formfirst").style.display = "none";
+    document.getElementById("formsecond").style.display = "none";
+    document.getElementById("formthird").style.display = "flex";
+    document.getElementById("formfourth").style.display = "none";
+    document.getElementById("formfifth").style.display = "none";
+  } else if (formcount === 4) {
+    document.getElementById("formfirst").style.display = "none";
+    document.getElementById("formsecond").style.display = "none";
+    document.getElementById("formthird").style.display = "none";
+    document.getElementById("formfourth").style.display = "flex";
+    document.getElementById("formfifth").style.display = "none";
+  } else if (formcount === 5) {
+    document.getElementById("formfirst").style.display = "none";
+    document.getElementById("formsecond").style.display = "none";
+    document.getElementById("formthird").style.display = "none";
+    document.getElementById("formfourth").style.display = "none";
+    document.getElementById("formfifth").style.display = "flex";
   }
 }
