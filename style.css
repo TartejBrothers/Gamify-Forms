@@ -77,7 +77,7 @@ form {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 30%;
+  gap: 20px;
   font-size: 20px;
 }
 #score,
